@@ -23,104 +23,109 @@ import AdminRoute from "./AdminRoute";
 import UserHome from "../Dashboard/UserDashboard/Payment/UserHome/UserHome";
 import UserProfile from "../Dashboard/UserDashboard/UserProfile/UserProfile";
 import InstructorCourses from "../pages/Instructors/InstructorCourses";
+import AddProject from "../Projects/AddProject";
 // import Enrolled from "../Dashboard/InstructorDashboard/Enrolled/Enrolled";
 
 const router = createBrowserRouter([
       {
             path: '/',
             element: <Main />,
-            errorElement:<ErrorPage></ErrorPage>,
+            errorElement: <ErrorPage></ErrorPage>,
             children: [
                   {
                         path: '/',
                         element: <Home />
                   },
                   {
+                        path: '/addproject',
+                        element: <AddProject />
+                  },
+                  {
                         path: 'instructors',
                         element: <Instructors />
                   },
                   {
-                        path:'instructorCourses/:email',
-                        element:<InstructorCourses></InstructorCourses>,
-                        
+                        path: 'instructorCourses/:email',
+                        element: <InstructorCourses></InstructorCourses>,
+
 
                   },
                   {
-                        path:'login',
-                        element:<Login></Login>
+                        path: 'login',
+                        element: <Login></Login>
                   },
                   {
-                        path:'register',
-                        element:<Registration></Registration>
+                        path: 'register',
+                        element: <Registration></Registration>
                   },
                   {
-                        path:'courses',
-                        element:<Courses></Courses>
+                        path: 'courses',
+                        element: <Courses></Courses>
                   },
                   {
-                        path:'userProfile',
-                        element:<UserProfile></UserProfile>
+                        path: 'userProfile',
+                        element: <UserProfile></UserProfile>
                   }
             ]
       },
       {
-            path:'dashboard',
-            element:<Dashboard></Dashboard>,
-            children:[
+            path: 'dashboard',
+            element: <Dashboard></Dashboard>,
+            children: [
                   // ------admin routes -----------
                   {
-                        path:'adminhome',
-                        element:<AdminRoute><AdminHome></AdminHome></AdminRoute>
+                        path: 'adminhome',
+                        element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
                   },
                   {
-                        path:'courses',
-                        element:<AdminRoute><ManageCourse></ManageCourse></AdminRoute>
+                        path: 'courses',
+                        element: <AdminRoute><ManageCourse></ManageCourse></AdminRoute>
                   },
                   {
-                        path:'users',
-                        element:<AdminRoute><ManageUsers></ManageUsers></AdminRoute>
+                        path: 'users',
+                        element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
                   },
 
                   //..................... users routes .......
                   {
-                       path:'userHome',
-                       element:<PrivateRoute><UserHome></UserHome></PrivateRoute>
+                        path: 'userHome',
+                        element: <PrivateRoute><UserHome></UserHome></PrivateRoute>
                   },
                   {
-                        path:'enrolCoourses',
-                        element:<PrivateRoute><EnrollCourse></EnrollCourse></PrivateRoute>
+                        path: 'enrolCoourses',
+                        element: <PrivateRoute><EnrollCourse></EnrollCourse></PrivateRoute>
                   },
                   {
-                        path:'paymentHistory',
-                        element:<PrivateRoute><PaymentHistory></PaymentHistory></PrivateRoute>
+                        path: 'paymentHistory',
+                        element: <PrivateRoute><PaymentHistory></PaymentHistory></PrivateRoute>
 
                   },
                   {
-                        path:'selected-courses',
-                        element:<PrivateRoute><SelectedCourses></SelectedCourses></PrivateRoute>
+                        path: 'selected-courses',
+                        element: <PrivateRoute><SelectedCourses></SelectedCourses></PrivateRoute>
                   },
                   {
-                        path:'payment/:id',
-                        element:<PrivateRoute><Payment></Payment></PrivateRoute>
+                        path: 'payment/:id',
+                        element: <PrivateRoute><Payment></Payment></PrivateRoute>
                   },
                   // -----------instructors routes -----------
                   {
-                        path:'instructorhome',
-                        element:<InstructorHome></InstructorHome>
+                        path: 'instructorhome',
+                        element: <InstructorHome></InstructorHome>
                   },
                   {
-                        path:'addClass',
-                        element:<AddClass></AddClass>
+                        path: 'addClass',
+                        element: <AddClass></AddClass>
                   },
                   {
-                        path:'myClasses',
-                        element:<MyClasses></MyClasses>
+                        path: 'myClasses',
+                        element: <MyClasses></MyClasses>
                   },
                   {
-                        path:'updateClass/:id',
-                        element:<UpdateClass/>
+                        path: 'updateClass/:id',
+                        element: <UpdateClass />
                   }
-                 
+
             ]
       }
 ])

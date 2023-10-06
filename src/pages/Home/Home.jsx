@@ -11,6 +11,7 @@ import WhyWeLearn from './WhyWeLearn/WhyWeLearn';
 import CompanyCourses from '../CompanyCourses/CompanyCourses';
 import PeopleSay from './PeopleSay/PeopleSay';
 import Subscribe from './Subscribe/Subscribe';
+import { SliderComponent } from './SliderComponent';
 
 
 const Home = () => {
@@ -18,17 +19,17 @@ const Home = () => {
       return (
             <div >
 
-                  <Banner></Banner>
-                 
+                  <SliderComponent />
+
                   <SpecialServices></SpecialServices>
                   <PopularClasses />
-                  <WhyWeLearn/>
-                  <CompanyCourses/>
+                  <WhyWeLearn />
+                  <CompanyCourses />
                   <FeaturedInstructors></FeaturedInstructors>
                   <Pricing></Pricing>
                   <div className=' bg-slate-100 shadow-lg mb-24 py-16'><Instragram></Instragram></div>
-                  <PeopleSay/>
-                  <Subscribe/>
+                  <PeopleSay />
+                  <Subscribe />
 
             </div>
       );
