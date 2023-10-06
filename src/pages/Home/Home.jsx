@@ -11,6 +11,7 @@ import WhyWeLearn from './WhyWeLearn/WhyWeLearn';
 import CompanyCourses from '../CompanyCourses/CompanyCourses';
 import PeopleSay from './PeopleSay/PeopleSay';
 import Subscribe from './Subscribe/Subscribe';
+import { SliderComponent } from './SliderComponent';
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
       return (
             <div >
 
-                  <Banner></Banner>
+                  <SliderComponent></SliderComponent>
 
                   <SpecialServices></SpecialServices>
                   <PopularClasses />
