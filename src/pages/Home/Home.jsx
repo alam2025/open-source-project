@@ -26,7 +26,7 @@ const Home = () => {
                   <WhyWeLearn />
                   <CompanyCourses />
                   <FeaturedInstructors></FeaturedInstructors>
-                  <Pricing></Pricing>
+                  {/* <Pricing></Pricing> */}
                   <div className=' bg-slate-100 shadow-lg mb-24 py-16'><Instragram></Instragram></div>
                   <PeopleSay />
                   <Subscribe />

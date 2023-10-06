@@ -121,12 +121,12 @@ const CompanyCourses = () => {
 
       return (
             <div className='  bg-gray-50 py-16 px-[5%]'>
-                  <div className=' w-[90%] md:w-[60%] mx-auto'>
-                        <h1 className=' text-4xl font-bold text-indigo-800 text-center'>Explore Company Courses</h1>
-                        <p className='text-center my-4'>Language Learning School is a global training provider based across the UK that specialists in accredited and bespoke training course. We crush the barriers to getting a degree</p>
+                  <div className='w-[90%] md:w-[60%] mx-auto'>
+                        <h1 className='text-4xl font-bold text-indigo-800 text-center'>Explore Open Source Projects</h1>
+                        <p className='text-center my-4'>Discover a vast array of open-source projects from our global community. We are dedicated to promoting collaboration and innovation through open-source contributions.</p>
                   </div>
 
-                  <div className=' grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-16 '>
+                  <div className='grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-16'>
                         {
                               courseCompany.map((course, index) =>
                                     <div className=' flex gap-4 items-center bg-white p-3 rounded-md shadow-md' key={index}>
@@ -140,11 +140,12 @@ const CompanyCourses = () => {
                         }
                   </div>
 
-                  <div className=' flex justify-center items-center'>
-                        <Link to='/courses'>
-                              <button className=' btn bg-violet-600 px-8 py-3 text-white mt-8 hover:bg-violet-800'>Explore All Course</button>
+                  <div className='flex justify-center items-center'>
+                        <Link to='/projects'>
+                              <button className='btn bg-violet-600 px-8 py-3 text-white mt-8 hover:bg-violet-800'>Explore All Projects</button>
                         </Link>
                   </div>
+
             </div>
       );
 };
