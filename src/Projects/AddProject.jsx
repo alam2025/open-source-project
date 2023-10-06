@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import addProjectBg from './../assets/addProject.jpg'
 import { Helmet } from 'react-helmet';
 import SectionTitle from '../pages/Shared/SectionTitle';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../hooks/useAxioseSequre';
 const AddProject = () => {
+    const [axiosSecure] = useAxiosSecure();
     const [formData, setFormData] = useState({
         projectName: '',
         projectImage: '',
@@ -24,6 +27,22 @@ const AddProject = () => {
         e.preventDefault()
 
         console.log(formData);
+
+        axiosSecure.post(`/addClass`, formData)
+            .then(res => {
+                if (res.data.insertedId) {
+                  
+                    // console.log(res);
+
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your class has been Added',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
 
     return (
@@ -105,7 +124,7 @@ const AddProject = () => {
 
                 <div className="lg:w-1/2 px-4 mb-4">
                     <label className="block text-sm font-bold  mb-2" htmlFor="projectImage">
-                        Project Image
+                        Project Image Url
                     </label>
                     <input
                         className="w-full border p-2 rounded focus:outline-none focus:shadow-outline"
