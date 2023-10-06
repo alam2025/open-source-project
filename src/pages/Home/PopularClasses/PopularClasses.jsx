@@ -9,16 +9,19 @@ const PopularClasses = () => {
 
 
 
-     
+
       const popular = courses.slice(0, 6)
-      
+
 
       return (
             <div className='my-container my-20'>
-                  <div className=' w-[90%] md:w-[60%] mx-auto mb-16'>
-                        <h1 className=' text-4xl font-bold text-indigo-800 text-center'>Popular Courses</h1>
-                        <p className='text-center my-4'>Language Learning School is a global training provider based across the UK that specialists in accredited and bespoke training course. We crush the barriers to getting a degree</p>
+                  <div className='w-[90%] md:w-[60%] mx-auto mb-16'>
+                        <h1 className='text-4xl font-bold text-indigo-800 text-center'>Popular Open-Source Projects</h1>
+                        <p className='text-center my-4'>
+                              Explore these popular open-source projects that contribute to the global developer community. These projects are collaborative, free to use, and offer a wealth of learning opportunities for developers around the world.
+                        </p>
                   </div>
+
 
                   <div className=' justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-8'>
                         {
