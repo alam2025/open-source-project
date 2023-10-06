@@ -181,25 +181,26 @@ const AddProject = () => {
                             Download Link
                         </label>
                         <Controller
-                            name="downloadLink"
-                            control={control}
-                            defaultValue=""
-                            rules={{ required: 'Download Link is required' }}
-                            render={({ field }) => (
-                                <>
-                                    <input
-                                        {...field}
-                                        type="text"
-                                        id="downloadLink"
-                                        className={`form-input ${errors.downloadLink ? 'border-red-500' : 'border-indigo-500'}`}
-                                        placeholder="Download Link"
-                                    />
-                                    {errors.downloadLink && (
-                                        <p className="text-red-500 text-sm mt-1">{errors.downloadLink.message}</p>
-                                    )}
-                                </>
-                            )}
-                        />
+    name="downloadLink"
+    control={control}
+    defaultValue=""
+    rules={{ required: 'Download Link is required' }}
+    render={({ field }) => (
+        <>
+            <input
+                {...field}
+                type="text"
+                id="downloadLink"
+                className={`form-input border ${errors.downloadLink ? 'border-red-500' : 'border-indigo-500'} p-2 rounded-md`}
+                placeholder="Download Link"
+            />
+            {errors.downloadLink && (
+                <p className="text-red-500 text-sm mt-1">{errors.downloadLink.message}</p>
+            )}
+        </>
+    )}
+/>
+
                     </div>
 
                     {/* Project Description */}
