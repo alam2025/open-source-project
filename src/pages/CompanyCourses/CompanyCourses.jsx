@@ -117,13 +117,13 @@ const CompanyCourses = () => {
       ]
 
       show ? courseCompany : courseCompany = courseCompany.slice(0, 9)
-
+ 
 
       return (
-            <div className='  bg-gray-50 py-16 px-[5%]'>
+            <div className='   py-16 px-[5%]'>
                   <div className='w-[90%] md:w-[60%] mx-auto'>
-                        <h1 className='text-4xl font-bold text-indigo-800 text-center'>Explore Open Source Projects</h1>
-                        <p className='text-center my-4'>Discover a vast array of open-source projects from our global community. We are dedicated to promoting collaboration and innovation through open-source contributions.</p>
+                        <h1 className='text-4xl font-bold text-white text-center'>Explore Open Source Projects</h1>
+                        <p className='text-center my-4 text-white'>Discover a vast array of open-source projects from our global community. We are dedicated to promoting collaboration and innovation through open-source contributions.</p>
                   </div>
 
                   <div className='grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-16'>

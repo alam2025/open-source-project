@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useEnroll from '../../hooks/useEnroll';
 import useAdmin from '../../hooks/useAdmin';
 import useAxiosSecure from '../../hooks/useAxioseSequre';
@@ -91,34 +91,21 @@ const CourseCard = ({ course }) => {
             }
       }
       return (
-            <div className={` hover:bg-violet-500 hover:text-white  rounded-md border p-4  flex flex-col  ${(isSelected) && 'hidden'}`}>
+            <a href={course?.website_link} target='_blank' className={` hover:bg-violet-500 hover:text-white  rounded-md border  flex flex-col  ${(isSelected) && 'hidden'}`}>
                   <div className=' overflow-hidden'>
-                        <img className='w-[60px] h-[40px] transition duration-1000 hover:transform hover:scale-110 rounded-md' src={image} alt={name} />
+                        <img className='w-full transition h-[250px] duration-1000 hover:transform hover:scale-110 rounded-md' src={course?.projectImage} alt={name} />
 
                   </div>
-                  <h3 className=' text-2xl text-indigo-800  my-2 font-semibold'>{name}</h3>
-                  <h3 className=' mb-3 text-2xl font-bold text-green-500'>${price}</h3>
-                  <hr />
-                  <div className=' pt-6 mb-3 flex justify-between gap-4'>
-                        <div className=' flex gap-4'>
-                              <MdEventAvailable size={30} />
-                              <p className='text-xl'>{available_seats} seats</p>
-                        </div>
-                        <div className='flex gap-4'>
-                              {/* <PiStudentBold/> */}
-                              <MdAssignmentInd size={30}/>
-                              <p className='text-xl'>{enroll_student || 0} student</p>
-                        </div>
-                        
 
-                        
-                       
-
+                  <div className=' text-white px-5 mt-4'>
+                        <h1 className=' text-xl text-center  font-semibold'>{course?.projectName}</h1>
+                        <p className=' my-4 text-justify'>{course.description.slice(0,250)}... <span className=' text-green-500'>More</span></p>
                   </div>
-                  <button disabled={isAdmin === true || isSelected || itInstructor === true || available_seats === 0} onClick={() => handleAddCart(course)} className={`mt-auto w-1/2 btn btn-outline btn-success border-black `}>ADD TO CART</button>
+                 
+                  
 
                   
-            </div>
+            </a>
       );
 };
 

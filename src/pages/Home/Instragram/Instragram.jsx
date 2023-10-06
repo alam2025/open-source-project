@@ -12,7 +12,7 @@ import ins5 from '../../../assets/instragram/ins5.jpg'
 
 const Instragram = () => {
       return (
-            <div className=' my-container bg-slate-50 p-10 rounded-md'>
+            <div className=' my-container  p-10 rounded-md'>
                   <SectionTitle subHeading={'Follow Us'} heading={'on Instagram'}></SectionTitle>
 
 
