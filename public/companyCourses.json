@@ -1,0 +1,102 @@
+[
+      {
+            "title": "Introduction to Web Development",
+            "course_number": 20,
+            "course_logo": "web_development_logo.png"
+      },
+      {
+            "title": "Data Science Fundamentals",
+            "course_number": 27,
+            "course_logo": "data_science_logo.png"
+      },
+      {
+            "title": "Graphic Design Essentials",
+            "course_number": 40,
+            "course_logo": "graphic_design_logo.png"
+      },
+      {
+            "title": "Introduction to Artificial Intelligence",
+            "course_number": 15,
+            "course_logo": "artificial_intelligence_logo.png"
+      },
+      {
+            "title": "Photography for Beginners",
+            "course_number": 60,
+            "course_logo": "photography_logo.png"
+      },
+      {
+            "title": "Mobile App Development with React Native",
+            "course_number": 57,
+            "course_logo": "react_native_logo.png"
+      },
+      {
+            "title": "Business Management and Leadership",
+            "course_number": 28,
+            "course_logo": "business_management_logo.png"
+      },
+      {
+            "title": "Spanish Language and Culture",
+            "course_number": 27,
+            "course_logo": "spanish_language_logo.png"
+      },
+      {
+            "title": "Machine Learning in Python",
+            "course_number": 43,
+            "course_logo": "machine_learning_logo.png"
+      },
+      {
+            "title": "Introduction to Finance and Investing",
+            "course_number": 35,
+            "course_logo": "finance_investing_logo.png"
+      },
+      {
+            "title": "Digital Marketing Strategy",
+            "course_number": 87,
+            "course_logo": "digital_marketing_logo.png"
+      },
+      {
+            "title": "Android App Development with Kotlin",
+            "course_number": 23,
+            "course_logo": "android_development_logo.png"
+      },
+      {
+            "title": "Introduction to Psychology",
+            "course_number": 34,
+            "course_logo": "psychology_logo.png"
+      },
+      {
+            "title": "Advanced Excel Techniques",
+            "course_number": 32,
+            "course_logo": "excel_logo.png"
+      },
+      {
+            "title": "Environmental Science and Sustainability",
+            "course_number": 33,
+            "course_logo": "environmental_science_logo.png"
+      },
+      {
+            "title": "Creative Writing Workshop",
+            "course_number": 34,
+            "course_logo": "creative_writing_logo.png"
+      },
+      {
+            "title": "Introduction to Cybersecurity",
+            "course_number": 55,
+            "course_logo": "cybersecurity_logo.png"
+      },
+      {
+            "title": "Modern Art History",
+            "course_number": 12,
+            "course_logo": "modern_art_history_logo.png"
+      },
+      {
+            "title": "Business Ethics and Corporate Social Responsibility",
+            "course_number": 45,
+            "course_logo": "business_ethics_logo.png"
+      },
+      {
+            "title": "Game Development with Unity",
+            "course_number": 32,
+            "course_logo": "game_development_logo.png"
+      }
+]
