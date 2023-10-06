@@ -12,7 +12,11 @@ import { useRef } from 'react';
 import Swal from 'sweetalert2';
 
 const Registration = () => {
+<<<<<<< HEAD
       const [processing,setProcessing]=useState(false)
+=======
+      const [processing, setProcessing] = useState(false)
+>>>>>>> 79984570798fda715b0dfb7958c68a4f5439e821
       const { createUser,
             setProfile,
             user,
@@ -35,6 +39,12 @@ const Registration = () => {
 
       const onSubmit = async (data) => {
             setError('')
+<<<<<<< HEAD
+=======
+            console.log(data);
+
+
+>>>>>>> 79984570798fda715b0dfb7958c68a4f5439e821
             setProcessing(true);
             const formData = new FormData();
             formData.append('image', data.photo[0]);
@@ -44,8 +54,13 @@ const Registration = () => {
             if (response.data && response.data.data && response.data.data.url) {
                   if (response.data.success) {
                         const imgUrl = response.data.data.display_url;
+<<<<<<< HEAD
                         const { name, email } = data;
                         const newUser = { name, email, photo: imgUrl }
+=======
+                        const { name, email,address ,phoneNumber,gender ,facebook_url,github_url} = data;
+                        const newUser = { name, email, photo: imgUrl,address,phoneNumber,gender,facebook_url,github_url}
+>>>>>>> 79984570798fda715b0dfb7958c68a4f5439e821
                         if (data.password !== data.confirmPassword) {
                               setError("Passwords do not match");
                         }
@@ -181,12 +196,45 @@ const Registration = () => {
                                           <label htmlFor="address" className="block text-gray-700 font-bold mb-1">
                                                 Address
                                           </label>
+<<<<<<< HEAD
                                           <textarea
+=======
+                                          <input
+                                                type='text'
+>>>>>>> 79984570798fda715b0dfb7958c68a4f5439e821
                                                 id="address"
                                                 name="address"
                                                 className="w-full border border-gray-300 rounded-md px-3 py-2"
                                                 {...register('address')}
+<<<<<<< HEAD
                                           ></textarea>
+=======
+                                          ></input>
+                                    </div>
+                                    <div className="mb-4">
+                                          <label htmlFor="facebook_url" className="block text-gray-700 font-bold mb-1">
+                                                Facebook_url
+                                          </label>
+                                          <input
+                                                type='text '
+                                                id="facebook_url"
+                                                name="facebook_url"
+                                                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                                                {...register('facebook_url')}
+                                          ></input>
+                                    </div>
+                                    <div className="mb-4">
+                                          <label htmlFor="github_url" className="block text-gray-700 font-bold mb-1">
+                                                Github_url
+                                          </label>
+                                          <input
+                                                type='text '
+                                                id="github_url"
+                                                name="github_url"
+                                                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                                                {...register('github_url')}
+                                          ></input>
+>>>>>>> 79984570798fda715b0dfb7958c68a4f5439e821
                                     </div>
                                     <div className="mb-4">
                                           <label htmlFor="password" className="block text-gray-700 font-bold mb-1">

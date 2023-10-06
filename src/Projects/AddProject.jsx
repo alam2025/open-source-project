@@ -127,10 +127,12 @@ const AddProject = () => {
                                 <>
                                     <textarea
                                         {...field}
-                                        id="chatServiceCode"
-                                        className={`form-textarea ${errors.chatServiceCode ? 'border-red-500' : 'border-yellow-500'}`}
-                                        placeholder="Twak.to Chat Service Code"
+                                        id="tutorial"
+                                        className={`form-textarea border ${errors.tutorial ? 'border-red-500' : 'border-purple-500'}`}
+                                        placeholder="Tutorial"
+                                        style={{ padding: '0.5rem', borderRadius: '0.375rem' }}
                                     />
+
                                     {errors.chatServiceCode && (
                                         <p className="text-red-500 text-sm mt-1">{errors.chatServiceCode.message}</p>
                                     )}
@@ -151,19 +153,26 @@ const AddProject = () => {
                             rules={{ required: 'Platform is required' }}
                             render={({ field }) => (
                                 <>
-                                    <input
-                                        {...field}
-                                        type="text"
-                                        id="platform"
-                                        className={`form-input ${errors.platform ? 'border-red-500' : 'border-teal-500'}`}
-                                        placeholder="Platform"
-                                    />
+                                    <label htmlFor="platform" className="block text-gray-700">
+                                        Platform (e.g., Windows, Mac, Android)
+                                    </label>
+                                    <div className="flex items-center border rounded-md py-2 px-3">
+                                        <input
+                                            {...field}
+                                            type="text"
+                                            id="platform"
+                                            className={`w-full focus:outline-none ${errors.platform ? 'border-red-500' : 'border-teal-500'
+                                                }`}
+                                            placeholder="Platform"
+                                        />
+                                    </div>
                                     {errors.platform && (
                                         <p className="text-red-500 text-sm mt-1">{errors.platform.message}</p>
                                     )}
                                 </>
                             )}
                         />
+
                     </div>
 
                     {/* Download Link */}

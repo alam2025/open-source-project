@@ -39,6 +39,7 @@ const SocialLogin = () => {
                   {
                         error&&<p>{error}</p>
                   }
+<<<<<<< HEAD
                   <button className="btn btn-circle btn-outline">
                         <FaFacebook size={40} />
                   </button>
@@ -48,6 +49,13 @@ const SocialLogin = () => {
                   <button className="btn btn-circle btn-outline">
                         <FaGithub size={40} />
                   </button>
+=======
+                  
+                  <button onClick={handlegooglesignIn} className="btn btn-circle btn-outline">
+                        <FaGoogle size={40} />
+                  </button>
+                  
+>>>>>>> 79984570798fda715b0dfb7958c68a4f5439e821
             </div>
       );
 };
