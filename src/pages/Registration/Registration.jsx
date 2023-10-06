@@ -47,8 +47,8 @@ const Registration = () => {
             if (response.data && response.data.data && response.data.data.url) {
                   if (response.data.success) {
                         const imgUrl = response.data.data.display_url;
-                        const { name, email, address, phoneNumber, gender, facebook_url, github_url } = data;
-                        const newUser = { name, email, photo: imgUrl, address, phoneNumber, gender, facebook_url, github_url }
+                        const { name, email,address ,phoneNumber,gender ,facebook_url,github_url} = data;
+                        const newUser = { name, email, photo: imgUrl,address,phoneNumber,gender,facebook_url,github_url}
                         if (data.password !== data.confirmPassword) {
                               setError("Passwords do not match");
                         }
