@@ -8,7 +8,7 @@ import useAuth from '../../hooks/useAuth';
 import useAdmin from '../../hooks/useAdmin';
 import LoadingSpinner from '../../pages/Shared/LoadingSpinner';
 import isInstructor from '../../hooks/isInstructor';
-
+import addProject from './../../assets/addProject.jpg'
 
 const Dashboard = () => {
       const { logOut, user } = useAuth()
@@ -25,7 +25,7 @@ const Dashboard = () => {
       return (
             <div className="drawer lg:drawer-open">
                   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                  <div className="drawer-content ">
+                  <div style={{ backgroundImage:`url(${addProject})` }} className="drawer-content ">
                         {/* Page content here */}
                         <label htmlFor="my-drawer-2" className="  bg-transparent  drawer-button  lg:hidden ml-4 cursor-pointer "><TfiAlignJustify size={50} /></label>
                        

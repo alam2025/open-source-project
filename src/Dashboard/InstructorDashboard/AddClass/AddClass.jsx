@@ -88,9 +88,9 @@ const AddClass = () => {
       return (
             <div>
                   <Helmet>
-                        <title>Language Learning School | Add Class</title>
+                        <title>Open Source | Add Project</title>
                   </Helmet>
-                  <SectionTitle heading={'Add a Course'}></SectionTitle>
+                  <SectionTitle heading={'Add a Project'}></SectionTitle>
 
 
                   {/* input field  */}

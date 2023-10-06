@@ -10,6 +10,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 import SocialLogin from './SocialLogin/SocialLogin';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import Swal from 'sweetalert2';
+import loginBg from './../../assets/login.jpg'
 
 const Login = () => {
       const [disabled, setDisabled] = useState(true)
@@ -69,11 +70,11 @@ const Login = () => {
       }, [])
 
       return (
-            <div className=' mb-24'>
+            <div style={{ backgroundImage:`url(${loginBg})` }} className='  bg-opacity-50'>
                   <SectionBanner title={'Login'} route={'Home | Login'}></SectionBanner>
-                  <SectionTitle heading={'Login Form'} subHeading={''}></SectionTitle>
+                 
 
-                  <div className="container my-container mx-auto px-4 border shadow-md py-12 px-10 bg-slate-100 ">
+                  <div className="container my-container mx-auto  shadow-md py-12 px-10  ">
                         {/* <h1 className="text-2xl font-bold mb-4">Login</h1> */}
                         <div className=' flex flex-col md:flex-row gap-12 justify-center items-center'>
                               <div className='w-full'>
@@ -82,7 +83,7 @@ const Login = () => {
                                           width={400}
                                     />
                               </div>
-                              <div className='w-full'>
+                              <div className='w-full bg-slate-200 p-8 rounded-2xl shadow-2xl'>
                                     {error && <p className=' text-red-600'>{error}</p>}
                                     <form className=' flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                                           <div className="mb-4">
