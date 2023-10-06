@@ -10,7 +10,7 @@ const ManageUsers = () => {
       const { data: users = [], refetch } = useQuery({
             queryKey: ['users'],
             queryFn: async () => {
-                  const res = await axiosSecure.get(`https://language-learning-school-server.vercel.app/users`);
+                  const res = await axiosSecure.get(`http://localhost:3000/users`);
                   return res.data;
             }
       })
@@ -18,6 +18,8 @@ const ManageUsers = () => {
 
       //admin set
       const handleAdmin = user => {
+
+            console.log(user);
             axiosSecure.patch(`/users/admin/${user._id}`)
                   .then(data => {
 

@@ -25,10 +25,10 @@ const Dashboard = () => {
       return (
             <div className="drawer lg:drawer-open">
                   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                  <div style={{ backgroundImage:`url(${addProject})` }} className="drawer-content ">
+                  <div style={{ backgroundImage: `url(${addProject})` }} className="drawer-content ">
                         {/* Page content here */}
                         <label htmlFor="my-drawer-2" className="  bg-transparent  drawer-button  lg:hidden ml-4 cursor-pointer "><TfiAlignJustify size={50} /></label>
-                       
+
                         <Outlet></Outlet>
 
 
@@ -47,13 +47,13 @@ const Dashboard = () => {
                               {
                                     (isAdmin && !itInstructor) && <>
                                           <li><NavLink to='/dashboard/adminhome'><FaHome />ADMIN HOME</NavLink></li>
-                                          <li><NavLink to='/dashboard/courses'><FaBookOpen />Manage Courses</NavLink></li>
+                                          <li><NavLink to='/dashboard/courses'><FaBookOpen />Manage Projects</NavLink></li>
                                           <li><NavLink to='/dashboard/users'><FaUsers />Manage Users</NavLink></li>
                                     </>
                               }
                               {
                                     //-------- user navbar --------------
-                                    (user&& !itInstructor && !isAdmin) && <>
+                                    (user && !itInstructor && !isAdmin) && <>
                                           <li><NavLink to='/dashboard/userhome'>USER HOME</NavLink></li>
                                           <li><NavLink to='/dashboard/selected-courses'>SELECTED COURSES</NavLink></li>
                                           <li><NavLink to='/dashboard/enrolCoourses'>Enroll COURSES</NavLink></li>
@@ -65,12 +65,13 @@ const Dashboard = () => {
                               {
                                     (itInstructor && !isAdmin) && <>
                                           <li><NavLink to='/dashboard/instructorhome'>INSTRUCTOR HOME</NavLink></li>
-                                          <li><NavLink to='/dashboard/addClass'>ADD CLASS</NavLink></li>
-                                          <li><NavLink to='/dashboard/myClasses'>MY CLASSES</NavLink></li>
+                                          <li><NavLink to='/dashboard/addClass'>ADD Project</NavLink></li>
+                                          <li><NavLink to='/dashboard/myClasses'>MY Projects</NavLink></li>
                                           
                                     </>
 
                               }
+                              
 
                               <div className="divider"></div>
 

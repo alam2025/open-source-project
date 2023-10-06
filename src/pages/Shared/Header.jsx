@@ -36,9 +36,9 @@ const Header = ({ toggleTheme, theme }) => {
                               Home
                         </Link>
                   </li>
-                  <li>
+                  {/* <li>
                         <Link to='/addproject'>Add Project</Link>
-                  </li>
+                  </li> */}
                   <li>
                         <Link to="/instructors"
                               className={`${location?.pathname === '/instructors' ? 'active' : ""}`} >
