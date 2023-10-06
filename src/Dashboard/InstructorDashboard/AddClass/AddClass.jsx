@@ -53,6 +53,8 @@ const AddClass = () => {
                               date: new Date()
                         };
 
+                        
+
                         axiosSecure.post(`/addClass`, newCourse)
                               .then(res => {
                                     if (res.data.insertedId) {
@@ -121,7 +123,7 @@ const AddClass = () => {
                                           </label>
                                           <input
                                                 type="text"
-                                                readOnly
+                                                // readOnly
                                                 defaultValue={user?.displayName}
                                                 id="instructorName"
                                                 name="instructorName"
@@ -138,7 +140,7 @@ const AddClass = () => {
                                           <input
                                                 type="email"
                                                 id="email"
-                                                readOnly
+                                                // readOnly
                                                 defaultValue={user?.email}
                                                 name="email"
                                                 placeholder='Instructor Email'

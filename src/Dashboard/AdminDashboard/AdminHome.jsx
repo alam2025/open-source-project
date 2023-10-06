@@ -4,16 +4,18 @@ import useAuth from '../../hooks/useAuth';
 import useAxiosSecure from '../../hooks/useAxioseSequre';
 import { useQuery } from '@tanstack/react-query';
 import useCourses from '../../hooks/useCourses';
+import useUrl from '../../hooks/UseUrl';
 
 const AdminHome = () => {
       const { user } = useAuth();
+      const [url]= useUrl()
       const [courses]=useCourses()
 
       const [axiosSecure] = useAxiosSecure();
       const { data: users = [], refetch } = useQuery({
             queryKey: ['users'],
             queryFn: async () => {
-                  const res = await axiosSecure.get(`https://language-learning-school-server.vercel.app/users`);
+                  const res = await axiosSecure.get(`${url}/users`);
                   return res.data;
             }
       })
