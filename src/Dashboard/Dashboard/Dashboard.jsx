@@ -37,7 +37,7 @@ const Dashboard = () => {
                         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                         <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content uppercase ">
                               <div>
-                                    <img src={logo} alt="" className=' mb-10' />
+                                    <h1 className=' text-2xl font-bold my-12'>POLY MATRIX</h1>
                               </div>
 
                               {/* Sidebar content here */}
@@ -55,16 +55,16 @@ const Dashboard = () => {
                                     //-------- user navbar --------------
                                     (user && !itInstructor && !isAdmin) && <>
                                           <li><NavLink to='/dashboard/userhome'>USER HOME</NavLink></li>
-                                          <li><NavLink to='/dashboard/selected-courses'>SELECTED COURSES</NavLink></li>
-                                          <li><NavLink to='/dashboard/enrolCoourses'>Enroll COURSES</NavLink></li>
-                                          <li><NavLink to='/dashboard/paymentHistory'>PAYMENT HISTRORY</NavLink></li>
+                                          <li><NavLink to='/dashboard/selected-courses'>Explore Projects</NavLink></li>
+                                          {/* <li><NavLink to='/dashboard/enrolCoourses'>Enroll COURSES</NavLink></li>
+                                          <li><NavLink to='/dashboard/paymentHistory'>PAYMENT HISTRORY</NavLink></li> */}
                                     </>
                               }
 
                               {/* //instructor nav  */}
                               {
                                     (itInstructor && !isAdmin) && <>
-                                          <li><NavLink to='/dashboard/instructorhome'>INSTRUCTOR HOME</NavLink></li>
+                                          <li><NavLink to='/dashboard/instructorhome'>Contributor HOME</NavLink></li>
                                           <li><NavLink to='/dashboard/addClass'>ADD Project</NavLink></li>
                                           <li><NavLink to='/dashboard/myClasses'>MY Projects</NavLink></li>
                                           
@@ -78,8 +78,8 @@ const Dashboard = () => {
                               {/* ---------common navbar ------------ */}
 
                               <li><NavLink to='/'><FaHome />HOME</NavLink></li>
-                              <li><NavLink to='/instructors'><FaUsers />Instructors</NavLink></li>
-                              <li><NavLink to='/courses'><FaUsers />Courses</NavLink></li>
+                              <li><NavLink to='/instructors'><FaUsers />Contributors</NavLink></li>
+                              <li><NavLink to='/courses'><FaUsers />Projects</NavLink></li>
                               <li onClick={() => logOut().then(() => navigate('/'))}><h1 ><FaUsers />Logout</h1></li>
 
 

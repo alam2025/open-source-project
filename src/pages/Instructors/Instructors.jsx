@@ -9,7 +9,7 @@ const Instructors = () => {
      
       return (
             <div>
-                  <SectionBanner title={'Instructors'} route={'Home | Instructors'}></SectionBanner>
+                  <SectionBanner title={'Contributors'} route={'Home | Contributors'}></SectionBanner>
                   <div className=' my-container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mb-24  gap-10'>
                         {
                               instructors.map(instructor=><InstructorCard
