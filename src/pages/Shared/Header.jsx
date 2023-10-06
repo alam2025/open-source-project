@@ -42,13 +42,18 @@ const Header = ({ toggleTheme, theme }) => {
                   <li>
                         <Link to="/instructors"
                               className={`${location?.pathname === '/instructors' ? 'active' : ""}`} >
-                              Instructors
+                              Contributors
                         </Link>
                   </li>
                   <li>
                         <Link to="/courses"
                               className={`${location?.pathname === '/courses' ? 'active' : ""}`} >
-                              Courses
+                              Open Source projects
+                        </Link>
+                  </li>
+                  <li>
+                        <Link to="/CustomerReview">
+                              CustomerReview
                         </Link>
                   </li>
                   <li>
@@ -98,7 +103,7 @@ const Header = ({ toggleTheme, theme }) => {
                               </div>
                               <Link to="/">
                                     {
-                                          theme === 'dark' ? <img className="w-[200px]" src={logo2}></img> : <img className="w-[200px]" src={logo} alt="Language Learning School" />
+                                          theme === 'dark' ? "polymatrix" : "polymatrix"
                                     }
                               </Link>
                         </div>

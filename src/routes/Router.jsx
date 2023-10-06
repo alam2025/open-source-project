@@ -24,6 +24,7 @@ import UserHome from "../Dashboard/UserDashboard/Payment/UserHome/UserHome";
 import UserProfile from "../Dashboard/UserDashboard/UserProfile/UserProfile";
 import InstructorCourses from "../pages/Instructors/InstructorCourses";
 import AddProject from "../Projects/AddProject";
+import ReviewsComponent from "../pages/ReviewsComponent";
 // import Enrolled from "../Dashboard/InstructorDashboard/Enrolled/Enrolled";
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
                   {
                         path: '/addproject',
                         element: <AddClass />
+                  },
+                  {
+                        path: '/CustomerReview',
+                        element: <ReviewsComponent />
                   },
                   {
                         path: 'instructors',
@@ -115,7 +120,7 @@ const router = createBrowserRouter([
                   },
                   {
                         path: 'addClass',
-                        element: <AddProject/>
+                        element: <AddProject />
                   },
                   {
                         path: 'myClasses',
