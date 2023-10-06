@@ -33,8 +33,9 @@ const AddProject = () => {
                                         {...field}
                                         type="text"
                                         id="projectName"
-                                        className={`form-input ${errors.projectName ? 'border-red-500' : 'border-blue-500'}`}
+                                        className={`form-input border ${errors.projectName ? 'border-red-500' : 'border-blue-500'} rounded-md py-2 px-3`}
                                         placeholder="Project Name"
+                                        style={{ borderColor: errors.projectName ? '#EF4444' : '#3B82F6' }} // Customize border color
                                     />
                                     {errors.projectName && (
                                         <p className="text-red-500 text-sm mt-1">{errors.projectName.message}</p>
@@ -42,6 +43,7 @@ const AddProject = () => {
                                 </>
                             )}
                         />
+
                     </div>
 
                     {/* Project Image */}
@@ -56,18 +58,29 @@ const AddProject = () => {
                             rules={{ required: 'Project Image is required' }}
                             render={({ field }) => (
                                 <>
-                                    <input
-                                        {...field}
-                                        type="file"
-                                        id="projectImage"
-                                        className={`form-input ${errors.projectImage ? 'border-red-500' : 'border-green-500'}`}
-                                    />
+                                    <label htmlFor="projectImage" className="block text-gray-700">
+                                        Project Image
+                                    </label>
+                                    <div className="flex items-center border rounded-md py-2 px-3">
+                                        <input
+                                            {...field}
+                                            type="file"
+                                            id="projectImage"
+                                            className="w-full focus:outline-none"
+                                            style={{
+                                                border: `1px solid ${errors.projectImage ? '#EF4444' : '#10B981'}`,
+                                                borderRadius: '0.375rem',
+                                                padding: '0.5rem',
+                                            }}
+                                        />
+                                    </div>
                                     {errors.projectImage && (
                                         <p className="text-red-500 text-sm mt-1">{errors.projectImage.message}</p>
                                     )}
                                 </>
                             )}
                         />
+
                     </div>
 
                     {/* Tutorial */}
@@ -81,11 +94,15 @@ const AddProject = () => {
                             defaultValue=""
                             render={({ field }) => (
                                 <>
+                                    <label htmlFor="tutorial" className="block text-gray-700">
+                                        Tutorial (if possible)
+                                    </label>
                                     <textarea
                                         {...field}
                                         id="tutorial"
-                                        className={`form-textarea ${errors.tutorial ? 'border-red-500' : 'border-purple-500'}`}
+                                        className={`form-textarea border ${errors.tutorial ? 'border-red-500' : 'border-purple-500'}`}
                                         placeholder="Tutorial"
+                                        style={{ padding: '0.5rem', borderRadius: '0.375rem' }}
                                     />
                                     {errors.tutorial && (
                                         <p className="text-red-500 text-sm mt-1">{errors.tutorial.message}</p>
@@ -93,6 +110,7 @@ const AddProject = () => {
                                 </>
                             )}
                         />
+
                     </div>
 
                     {/* Twak.to Chat Service Code */}
