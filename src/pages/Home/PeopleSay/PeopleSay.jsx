@@ -75,8 +75,8 @@ const PeopleSay = () => {
       return (
             <div className='   py-16 px-[5%]'>
                   <div className='w-[90%] md:w-[60%] mx-auto'>
-                        <h1 className='text-4xl font-bold text-indigo-800 text-center'>Community Feedback on Projects</h1>
-                        <p className='text-center my-4'>Explore what the community is saying about our open-source projects. Join the conversation and be part of our collaborative journey in innovation.</p>
+                        <h1 className='text-4xl font-bold text-white text-center'>Community Feedback on Projects</h1>
+                        <p className='text-center my-4 text-white'>Explore what the community is saying about our open-source projects. Join the conversation and be part of our collaborative journey in innovation.</p>
                   </div>
 
 

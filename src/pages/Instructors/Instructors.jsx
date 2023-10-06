@@ -2,6 +2,7 @@ import React from 'react';
 import SectionBanner from '../Shared/SectionBanner';
 import useInstructors from '../../hooks/useInstructors';
 import InstructorCard from './InstructorCard';
+import { Helmet } from 'react-helmet';
 
 
 const Instructors = () => {
@@ -9,6 +10,9 @@ const Instructors = () => {
      
       return (
             <div>
+                  <Helmet>
+                        <title>Home | contributors</title>
+                  </Helmet>
                   <SectionBanner title={'Contributors'} route={'Home | Contributors'}></SectionBanner>
                   <div className=' my-container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mb-24  gap-10'>
                         {

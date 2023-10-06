@@ -75,7 +75,7 @@ const Header = ({ toggleTheme, theme }) => {
 
       return (
             <>
-                  <div className={`navbar z-10 md:px-[5%] bg-white text-black  bg-base-100 border-b-2 shadow-lg ${theme === 'light' ? 'light' : 'dark'}`}>
+                  <div className={`navbar z-10 md:px-[5%] fixed bg-white text-black  bg-base-100 border-b-2 shadow-lg ${theme === 'light' ? 'light' : 'dark'}`}>
                         <div className="navbar-start">
                               <div className="dropdown">
                                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -101,7 +101,7 @@ const Header = ({ toggleTheme, theme }) => {
                                           {navTabs}
                                     </ul>
                               </div>
-                              <Link to="/">
+                              <Link className=" font-extrabold text-3xl uppercase" to="/">
                                     {
                                           theme === 'dark' ? "polymatrix" : "polymatrix"
                                     }

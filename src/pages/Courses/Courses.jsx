@@ -7,6 +7,7 @@ import { useQuery } from '@tanstack/react-query';
 import useCourses from '../../hooks/useCourses';
 import { Link } from 'react-router-dom';
 import CourseCard from './CourseCard';
+import { Helmet } from 'react-helmet';
 const Courses = () => {
       const [selectedCategory, setSelectedCategory] = useState([]);
 
@@ -26,6 +27,7 @@ const Courses = () => {
       
       return (
             <div>
+                  <Helmet><title>Home | Projects</title></Helmet>
                   <SectionBanner title={'Projects'} route={'Home | Projects'}></SectionBanner>
 
                   <SectionTitle heading={'Choose Your Project'} subHeading={''}></SectionTitle>

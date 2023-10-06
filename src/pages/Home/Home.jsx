@@ -12,12 +12,16 @@ import CompanyCourses from '../CompanyCourses/CompanyCourses';
 import PeopleSay from './PeopleSay/PeopleSay';
 import Subscribe from './Subscribe/Subscribe';
 import { SliderComponent } from './SliderComponent';
+import { Helmet } from 'react-helmet';
 
 
 const Home = () => {
       const { theme, toggleTheme } = useContext(ThemeContext);
       return (
             <div >
+                  <Helmet>
+                        <title>Home</title>
+                  </Helmet>
 
                   <SliderComponent></SliderComponent>
 
@@ -27,7 +31,7 @@ const Home = () => {
                   <CompanyCourses />
                   <FeaturedInstructors></FeaturedInstructors>
                   {/* <Pricing></Pricing> */}
-                  <div className=' bg-slate-100 shadow-lg mb-24 py-16'><Instragram></Instragram></div>
+                  {/* <div className=' shadow-lg mb-24 py-16'><Instragram></Instragram></div> */}
                   <PeopleSay />
                   <Subscribe />
 
