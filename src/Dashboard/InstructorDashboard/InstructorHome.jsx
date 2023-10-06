@@ -45,19 +45,19 @@ const InstructorHome = () => {
                   <div className="stats shadow flex justify-center items-center md:mx-10">
 
                         <div className="stat place-items-center">
-                              <div className="stat-title">Total Approved Classes</div>
+                              <div className="stat-title">Total Approved Projects</div>
                               <div className="stat-value">{approved?.length}</div>
                              
                         </div>
 
                         <div className="stat place-items-center">
-                              <div className="stat-title">Pending Classes</div>
+                              <div className="stat-title">Pending Projects</div>
                               <div className="stat-value text-secondary">{pending?.length}</div>
                               
                         </div>
 
                         <div className="stat place-items-center">
-                              <div className="stat-title">Total Enrolled</div>
+                              <div className="stat-title">Total Explore</div>
                               <div className="stat-value">{totalEnroll || 0}</div>
                               
                         </div>

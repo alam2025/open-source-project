@@ -9,7 +9,7 @@ const UserHome = () => {
             <div>
                   <SectionTitle heading={`welcome to ${user.displayName}`}></SectionTitle>
 
-                  <UserStats></UserStats>
+                  
             </div>
       );
 };
