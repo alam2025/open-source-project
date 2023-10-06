@@ -1,5 +1,5 @@
 const useUrl = ()=>{
-      const url = 'http://localhost:3000';
+      const url = 'https://open-source-server.vercel.app';
 
       return [url];
 }
