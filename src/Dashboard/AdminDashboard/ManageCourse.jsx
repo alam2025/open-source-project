@@ -15,6 +15,8 @@ const ManageCourse = () => {
       if(loading){
             return <LoadingSpinner/>
       }
+
+      console.log(courses);
       
 
       return (

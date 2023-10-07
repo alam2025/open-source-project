@@ -91,7 +91,7 @@ const CourseCard = ({ course }) => {
             }
       }
       return (
-            <a href={course?.website_link} target='_blank' className={` hover:bg-violet-500 hover:text-white  rounded-md border  flex flex-col  ${(isSelected) && 'hidden'}`}>
+            <a href={course?.website_link} target='_blank' className={` hover:bg-violet-500 hover:text-white  rounded-md border shadow-lg  flex flex-col  ${(isSelected) && 'hidden'}`}>
                   <div className=' overflow-hidden'>
                         <img className='w-full transition h-[250px] duration-1000 hover:transform hover:scale-110 rounded-md' src={course?.projectImage} alt={name} />
 

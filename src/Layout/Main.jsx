@@ -4,11 +4,13 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../pages/Shared/Footer';
 import { useContext } from 'react';
 import { ThemeContext } from '../provider/ThemeProvider';
+import TalkToChat from '../pages/TalkToChat';
 
 const Main = () => {
       const { theme, toggleTheme } = useContext(ThemeContext);
       return (
             <div className={`flex bg-gradient-to-r from-[#6441A5]  to-[#2a0845] flex-col min-h-screen ${theme === 'light' ? 'light' : 'dark'}`} >
+                  <TalkToChat/>
 
                   <Header theme={theme} toggleTheme={toggleTheme} />
                   <Outlet />

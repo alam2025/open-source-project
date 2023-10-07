@@ -42,6 +42,7 @@ const router = createBrowserRouter([
                         element: <AddClass />
                   },
                   {
+
                         path: '/CustomerReview',
                         element: <ReviewsComponent />
                   },
@@ -64,7 +65,7 @@ const router = createBrowserRouter([
                         element: <Registration></Registration>
                   },
                   {
-                        path: 'courses',
+                        path: 'projects',
                         element: <Courses></Courses>
                   },
                   {

@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../firebase/firebase.config';
 import axios from 'axios';
+import useUrl from '../hooks/UseUrl';
 
 
 export const AuthContext = createContext(null)
@@ -9,6 +10,7 @@ const auth = getAuth(app)
 const googleProvider = new GoogleAuthProvider()
 
 const AuthProvider = ({ children }) => {
+      const [url]= useUrl()
       const [user, setUser] = useState(null)
       const [loading, setLoading] = useState(true)
       //user create using email and password
@@ -49,8 +51,9 @@ const AuthProvider = ({ children }) => {
                   setUser(currentUser);
 
                   if (currentUser) {
-                        axios.post('http://localhost:3000/jwt', { email: currentUser?.email })
+                        axios.post(`${url}/jwt`, { email: currentUser?.email })
                               .then(data => {
+                                   
                                     localStorage.setItem('access_token', data.data.token)
                                     setLoading(false)
                               })

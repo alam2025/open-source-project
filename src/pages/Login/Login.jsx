@@ -11,6 +11,7 @@ import SocialLogin from './SocialLogin/SocialLogin';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import Swal from 'sweetalert2';
 import loginBg from './../../assets/login.jpg'
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
       const [disabled, setDisabled] = useState(true)
@@ -72,7 +73,7 @@ const Login = () => {
       return (
             <div style={{ backgroundImage:`url(${loginBg})` }} className='  bg-opacity-50'>
                   <SectionBanner title={'Login'} route={'Home | Login'}></SectionBanner>
-                 
+                 <Helmet><title>Home | Login</title></Helmet>
 
                   <div className="container my-container mx-auto  shadow-md py-12 px-10  ">
                         {/* <h1 className="text-2xl font-bold mb-4">Login</h1> */}

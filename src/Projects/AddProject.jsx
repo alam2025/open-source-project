@@ -4,16 +4,21 @@ import { Helmet } from 'react-helmet';
 import SectionTitle from '../pages/Shared/SectionTitle';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../hooks/useAxioseSequre';
+import useAuth from '../hooks/useAuth';
 const AddProject = () => {
     const [axiosSecure] = useAxiosSecure();
+    const {user}= useAuth()
     const [formData, setFormData] = useState({
         projectName: '',
+        contributor_name:'',
+        Contributor_email:'',
         projectImage: '',
         platform: '',
         description: '',
         website_link: '',
         skill: '',
     });
+ 
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -46,7 +51,7 @@ const AddProject = () => {
     }
 
     return (
-        <div style={{ backgroundImage: `url(${addProjectBg})` }} className="container  p-4  mx-auto px-[20%] pt-[12%] pb-[16%]">
+        <div style={{ backgroundImage: `url(${addProjectBg})` }} className="container  p-4  mx-auto px-[16%] pt-[12%] pb-[16%]">
 
             <Helmet>
                 <title>Open Source | Add Project</title>
@@ -82,18 +87,34 @@ const AddProject = () => {
                     />
                 </div>
                 <div className="lg:w-1/2 px-4 mb-4">
-                    <label className="block text-sm font-bold  mb-2" htmlFor="description">
-                        Project Description
+                    <label className="block text-sm font-bold  mb-2" htmlFor="contributor_name">
+                        Your Name
                     </label>
                     <input
                         className="w-full border p-2 rounded focus:outline-none focus:shadow-outline"
                         type="text"
-                        id="description"
-                        name="description"
-                        value={formData.description}
+                       
+                        id="contributor_name"
+                        name="contributor_name"
+                        value={formData.contributor_name}
                         onChange={handleChange}
                     />
                 </div>
+                <div className="lg:w-1/2 px-4 mb-4">
+                    <label className="block text-sm font-bold  mb-2" htmlFor="Contributor_email">
+                       Your Email
+                    </label>
+                    <input
+                        className="w-full border p-2 rounded focus:outline-none focus:shadow-outline"
+                        type="email"
+                     
+                        id="Contributor_email"
+                        name="Contributor_email"
+                        value={formData.Contributor_email}
+                        onChange={handleChange}
+                    />
+                </div>
+                
 
                 <div className="lg:w-1/2 px-4 mb-4">
                     <label className="block text-sm font-bold  mb-2" htmlFor="website_link">
@@ -132,6 +153,19 @@ const AddProject = () => {
                         id="projectImage"
                         name="projectImage"
                         value={formData.projectImage}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="lg:w-1/2 px-4 mb-4">
+                    <label className="block text-sm font-bold  mb-2" htmlFor="description">
+                        Project Description
+                    </label>
+                    <textarea
+                        className="w-full border p-2 rounded focus:outline-none focus:shadow-outline"
+                        type="text"
+                        id="description"
+                        name="description"
+                        value={formData.description}
                         onChange={handleChange}
                     />
                 </div>

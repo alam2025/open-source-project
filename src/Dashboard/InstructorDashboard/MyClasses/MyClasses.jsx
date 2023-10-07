@@ -21,33 +21,32 @@ const MyClasses = () => {
             }
       })
 
-      // console.log(info);
 
       return (
             <div>
-                  <SectionTitle heading={'my classes'}></SectionTitle>
+                  <SectionTitle heading={'my projects'}></SectionTitle>
 
                   <div className=' mb-24'>
                         <div className="overflow-x-auto">
                               <table className="table">
                                     {/* head */}
-                                    <thead>
+                                    <thead className=' text-white'>
                                           <tr>
                                                 <th>
                                                       <label>
                                                             #
                                                       </label>
                                                 </th>
-                                                <th>Name</th>
-                                                <th>Price</th>
+                                                <th>Project Name</th>
+                                             
                                                 <th>Status</th>
-                                                <th>Total Enrolled</th>
+                                                <th>Total Explore</th>
                                                 <th>Update</th>
                                                 <th>Feedback</th>
 
                                           </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody className=' text-white'>
                                           {/* row 1 */}
                                           {
                                                 myClasses.map((myClass, index) => <tr key={index}>
@@ -60,15 +59,13 @@ const MyClasses = () => {
                                                             <div className="flex items-center space-x-3">
 
                                                                   <div>
-                                                                        <div className="font-bold">{myClass.name}</div>
-                                                                        <div className="text-sm opacity-50">{myClass.category}</div>
+                                                                        <div className="font-bold">{myClass.projectName}</div>
+                                                                      
                                                                   </div>
                                                             </div>
                                                       </td>
-                                                      <td>
-                                                            ${myClass?.price}
-                                                      </td>
-                                                      <td className={`${myClass?.status ==='Pending'&&'text-yellow-700 text-lg'}`}>{(myClass?.status==='Active'&&'Approved') || myClass?.status}</td>
+                                                    
+                                                      <td className={`${myClass?.status ==='Pending'&&'text-yellow-700 text-lg'}`}>{(myClass?.status==='Active'&&'Approved') || myClass?.status || 'Pending'}</td>
 
                                                       <td>{myClass?.enroll_student || 0}</td>
 

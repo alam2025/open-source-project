@@ -22,6 +22,7 @@ const Home = () => {
                   <Helmet>
                         <title>Home</title>
                   </Helmet>
+                  
 
                   <SliderComponent></SliderComponent>
 

@@ -42,40 +42,28 @@ const Table = ({ courses, refetch }) => {
       const columns = [
             {
                   name: 'Image',
-                  selector: row => <img className=' rounded-lg px-3 py-2' src={row.image} alt="" />,
+                  selector: row => <img className=' rounded-lg px-3 py-2' src={row.projectImage} alt="" />,
                   sortable: true
             },
             {
-                  name: 'Class Name',
-                  selector: row => row.name,
+                  name: 'Project Name',
+                  selector: row => row.projectName                  ,
                   sortable: true
             },
             {
-                  name: 'Instructor Name',
-                  selector: row => row.instructor,
+                  name: 'Website Url',
+                  selector: row => <a className=' text-green-500' href={row.website_link}>{row.website_link}</a>,
                   sortable: true
             },
-            {
-                  name: 'Instructor Email',
-                  selector: row => row.email,
-                  sortable: true
-            },
-            {
-                  name: 'Available Seats',
-                  selector: row => row.available_seats,
-                  sortable: true
-            },
-            {
-                  name: 'Price',
-                  selector: row => row.price,
-                  sortable: true
-            },
+          
             {
                   name: 'Approve',
                   selector: row =>
-                        <button disabled={row.status === 'Active' || row.status === 'Denied'} onClick={() => handleApprove(row)}
-                              className={`btn btn-sm ${row.status === 'Active' ? ' btn-success' : ' btn-warning'} rounded-md  `}>
-                              {row.status === 'Active' ? 'approve' : 'Pending'}
+                        <button 
+                        disabled ={row.status ==='Denied'}
+                          onClick={() => handleApprove(row)}
+                              className={`btn btn-sm ${row.status === 'Active' ? ' btn-success' : ' btn-warning'} rounded-md ${row.status === 'Active' && 'text-green-500  bg-gray-50'}  `}>
+                              {row.status === 'Active' ? 'approveed' : 'Pending'}
                         </button>,
                   sortable: true
             },
@@ -83,7 +71,7 @@ const Table = ({ courses, refetch }) => {
                   name: 'Deny',
                   selector: row =>
                         <button onClick={() => handleDeny(row)}
-                              disabled={row.status === 'Active' || row.status === 'Denied'} className={` btn btn-warning btn-sm`}>
+                              disabled={row.status === 'Active'} className={`${ row.status === 'Denied' && 'bg-red-500'} btn btn-warning btn-sm`}>
                               {
                                     (row.status === 'Pending' || row.status === 'Active') ? <ImCross /> : 'Denied'
                               }
