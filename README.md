@@ -1,40 +1,38 @@
-# Language learning school
+# Polymatrix 
 
 
 ## Links
 1. Live Website
-   [Language Leearnng School](https://language-learning-school-83352.web.app/ "Website url") and https://language-learning-school-83352.web.app/ 
+   [Open source projets](https://open-source-cd9f6.web.app/?fbclid=IwAR1A8vyiLjzcNnDZdiNcrWDjejMtbcZxD5gcDdnAEJWKvw2YYdbNekmlwAA/ "Website url") and https://open-source-cd9f6.web.app/?fbclid=IwAR1A8vyiLjzcNnDZdiNcrWDjejMtbcZxD5gcDdnAEJWKvw2YYdbNekmlwAA
 
 2. Client Site git Repository
-   [CLient Site ](https://github.com/alam2025/Language-learning-school-client/ "Client site") and https://github.com/alam2025/Language-learning-school-client
+   [CLient Site ](https://github.com/alam2025/open-source-project/ "Client site") and https://github.com/alam2025/open-source-project
 
 3. Server site git repository
-   [Server site git ](https://github.com/alam2025/language-learning-school-server/ "Server site") and https://github.com/alam2025/language-learning-school-server
+   [Server site git ](https://github.com/alam2025/open_source_server/ "Server site") and https://github.com/alam2025/open_source_server
 
 3. Admin email & password
-   * Email : alam12@gmail.com
-   * Password: Alam12@#
+   * Email : ekramhossain888@gmail.com
+   * Password: Ekram12@#
+
 
 
 
 ## Features
   1. It has a home page 
      * A navbar conditionally show data
-     * Banner image upload from server
-     * Popular courses section. Here 6 popular courses shows
-     * Also a instructor section
-     * A pricing section
- 2. Instructor Page
-    * All instructor here shows
+     * Slider upload from server
+     * Popular Projects  section. Here 6 popular Projects shows
+     * Also a contributors  section
+    
+ 2. Contributors Page
+    * All Contributors here shows
     * Some information are showed
- 3. Courses Section
-    * Here all courses are display with category
-    * By clicking on category specific courses are showed
-    * If user is admin or instructor or available is 0 user doen't add to cart
+ 3. Projects  Section
+    * Here all projects are display 
  4. In this section
-    * if a student , then show cart
     * if a admin shows admin dashboad
-    * If user become instructor , then show instructor dashboad
+    * If user become contributors , then show contributors dashboad
 5. Login and Registratin
     * if user not login then show login btn
     * If login success, then show user image with hover user name.
@@ -54,7 +52,7 @@
    10. Express js
    11. etc.
 
-### Thanks P-Hero Team to delivered this Awesome Support
+
 
 
 
