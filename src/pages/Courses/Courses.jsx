@@ -9,30 +9,26 @@ import { Link } from 'react-router-dom';
 import CourseCard from './CourseCard';
 import { Helmet } from 'react-helmet';
 const Courses = () => {
-      const [selectedCategory, setSelectedCategory] = useState([]);
-
-      const [courses] = useCourses()
-      const { data: categories = [] ,refetch} = useQuery({
-            queryKey: ['category'],
-            queryFn: async () => {
-                  const res = await fetch('/category.json');
-                  return res.json()
-            }
-      })
       
 
-      const handleTap = (category) => {
-            setSelectedCategory(category)
-      }
+      const [courses] = useCourses()
+ 
+      console.log(courses);
+
+     
       
       return (
             <div>
                   <Helmet><title>Home | Projects</title></Helmet>
                   <SectionBanner title={'Projects'} route={'Home | Projects'}></SectionBanner>
 
-                  <SectionTitle heading={'Choose Your Project'} subHeading={''}></SectionTitle>
+                  <SectionTitle heading={'Explore Project'} subHeading={''}></SectionTitle>
 
-                  <div className=' my-container mb-24'>
+                  <div className=' my-container mb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+
+                        {
+                              courses?.map((item)=><CourseCard key={item.id} course={item}></CourseCard>)
+                        }
                   
 
 

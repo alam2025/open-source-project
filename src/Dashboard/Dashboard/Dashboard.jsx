@@ -1,5 +1,5 @@
 import React from 'react';
-import { TfiAlignJustify } from "react-icons/tfi";
+import { TfiAlignJustify, TfiMenuAlt } from "react-icons/tfi";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import logo from '../../assets/black-logo.png'
@@ -27,7 +27,7 @@ const Dashboard = () => {
                   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                   <div style={{ backgroundImage: `url(${addProject})` }} className="drawer-content ">
                         {/* Page content here */}
-                        <label htmlFor="my-drawer-2" className="  bg-transparent  drawer-button  lg:hidden ml-4 cursor-pointer "><TfiAlignJustify size={50} /></label>
+                        <label htmlFor="my-drawer-2" className="  bg-transparent  drawer-button   lg:hidden ml-4 cursor-pointer "><TfiMenuAlt className=' text-white' size={40} /></label>
 
                         <Outlet></Outlet>
 

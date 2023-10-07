@@ -20,7 +20,7 @@ export const SliderComponent = () => (
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: false,
         }}
         pagination={{
@@ -28,12 +28,12 @@ export const SliderComponent = () => (
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper "
     >
         {
             sliders.map((slider, index) =>
 
-                <SwiperSlide key={index}><img className='w-full h-[600px] rounded-mds' src={slider}></img></SwiperSlide>
+                <SwiperSlide className=' ' key={index}><img className='w-full  h-[350px] md:h-[500px] lg:h-[600px] rounded-md' src={slider}></img></SwiperSlide>
             )
         }
 

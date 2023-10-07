@@ -3,8 +3,10 @@ import learn from '../../../../public/learn.json'
 import Lottie from 'react-lottie';
 import { MdOutlineAssignmentTurnedIn } from 'react-icons/md'
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 const WhyWeLearn = () => {
-      console.log(learn);
+      const {user} = useAuth()
+     
       const defaultOptions = {
             loop: true,
             autoplay: true,
@@ -18,7 +20,7 @@ const WhyWeLearn = () => {
                   <div className=' w-full md:w-1/2'>
                         <Lottie options={defaultOptions}
                               height={400}
-                              width={400}
+                              width={`100%`}
                         />        </div>
                   <div className='w-full md:w-1/2'>
                         <div className='text-center'>
@@ -35,7 +37,9 @@ const WhyWeLearn = () => {
                               <p className='flex items-center gap-4'><MdOutlineAssignmentTurnedIn className=' text-green-600' />  Job-relevant</p>
                         </div>
 
-                        <Link to='/register'><button className=' btn bg-violet-600 text-white mt-8 hover:bg-violet-800'>Register Now</button></Link>
+                       {
+                        !user?.email &&  <Link to='/register'><button className=' btn bg-violet-600 text-white mt-8 hover:bg-violet-800'>Register Now</button></Link>
+                       }
 
                   </div>
             </div>

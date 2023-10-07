@@ -5,12 +5,14 @@ import { useQuery } from '@tanstack/react-query';
 import { GrTrash, GrUserAdmin } from "react-icons/gr";
 import { GiTeacher } from "react-icons/gi";
 import Swal from 'sweetalert2';
+import useUrl from '../../hooks/UseUrl';
 const ManageUsers = () => {
+      const [url]= useUrl()
       const [axiosSecure] = useAxiosSecure();
       const { data: users = [], refetch } = useQuery({
             queryKey: ['users'],
             queryFn: async () => {
-                  const res = await axiosSecure.get(`http://localhost:3000/users`);
+                  const res = await axiosSecure.get(`${url}/users`);
                   return res.data;
             }
       })
@@ -93,7 +95,7 @@ const ManageUsers = () => {
                                           <th>Image</th>
                                           <th>Name</th>
                                           <th>Email</th>
-                                          <th>Make Instructor</th>
+                                          <th>Make Contributor</th>
                                           <th>Make Admin</th>
                                           <th>Delete</th>
                                     </tr>
@@ -129,7 +131,7 @@ const ManageUsers = () => {
                                                       <td >
                                                             <div className='flex items-center justify-center'>
                                                                   {
-                                                                        user?.role === 'instructor' ? 'Instructor' :
+                                                                        user?.role === 'instructor' ? 'Contributor' :
                                                                               <button
                                                                                     onClick={() => handleInstructor(user)}
                                                                                     className={` p-2 rounded-md text-white bg-green-400
