@@ -72,7 +72,7 @@ const Login = () => {
 
       return (
             <div style={{ backgroundImage:`url(${loginBg})` }} className='  bg-opacity-50'>
-                  <SectionBanner title={'Login'} route={'Home | Login'}></SectionBanner>
+                  {/* <SectionBanner title={'Login'} route={'Home | Login'}></SectionBanner> */}
                  <Helmet><title>Home | Login</title></Helmet>
 
                   <div className="container my-container mx-auto  shadow-md py-12 px-10  ">
@@ -84,7 +84,7 @@ const Login = () => {
                                           width={400}
                                     />
                               </div>
-                              <div className='w-full bg-slate-200 p-8 rounded-2xl shadow-2xl'>
+                              <div className='w-full mt-20 bg-slate-200 p-8 rounded-2xl shadow-2xl'>
                                     {error && <p className=' text-red-600'>{error}</p>}
                                     <form className=' flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                                           <div className="mb-4">
@@ -129,7 +129,7 @@ const Login = () => {
                                     </button> */}
                                     </form>
                                     <div className=' flex flex-col gap-4 mt-4 justify-center items-center'>
-                                          <Link to='/register' className=' text-orange-700'>New here? Create a New Account.</Link>
+                                          <Link to='/register' className=' text-green-700'>New here? Create a New Account.</Link>
                                           <p>Or , Sign in WIth</p>
                                           {/* <SocialSignIn/> */}
 

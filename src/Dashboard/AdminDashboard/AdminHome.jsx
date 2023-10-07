@@ -29,19 +29,19 @@ const AdminHome = () => {
                   <div className="stats shadow flex justify-center items-center md:mx-10">
 
                         <div className="stat place-items-center">
-                              <div className="stat-title">Instructors</div>
+                              <div className="stat-title">Contributors</div>
                               <div className="stat-value">{instructor?.length}</div>
                               
                         </div>
 
                         <div className="stat place-items-center">
-                              <div className="stat-title">Students</div>
+                              <div className="stat-title">Users</div>
                               <div className="stat-value text-secondary">{student?.length}</div>
                               
                         </div>
 
                         <div className="stat place-items-center">
-                              <div className="stat-title">Total Classes</div>
+                              <div className="stat-title">Total Projects</div>
                               <div className="stat-value">{courses?.length}</div>
                               
                         </div>

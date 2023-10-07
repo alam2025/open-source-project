@@ -25,6 +25,8 @@ import UserProfile from "../Dashboard/UserDashboard/UserProfile/UserProfile";
 import InstructorCourses from "../pages/Instructors/InstructorCourses";
 import AddProject from "../Projects/AddProject";
 import ReviewsComponent from "../pages/ReviewsComponent";
+import ApplyForContribute from "../Dashboard/UserDashboard/ApplyForContribute/ApplyForContribute";
+import ContributorApplication from "../Dashboard/AdminDashboard/ContributorApplication";
 // import Enrolled from "../Dashboard/InstructorDashboard/Enrolled/Enrolled";
 
 const router = createBrowserRouter([
@@ -91,6 +93,10 @@ const router = createBrowserRouter([
                         path: 'users',
                         element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
                   },
+                  {
+                        path:'application-review',
+                        element:<ContributorApplication/>
+                  },
 
                   //..................... users routes .......
                   {
@@ -100,6 +106,10 @@ const router = createBrowserRouter([
                   {
                         path: 'enrolCoourses',
                         element: <PrivateRoute><EnrollCourse></EnrollCourse></PrivateRoute>
+                  },
+                  {
+                        path:'apply-contributor',
+                        element:<ApplyForContribute/>
                   },
                   {
                         path: 'paymentHistory',
