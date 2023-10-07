@@ -49,6 +49,7 @@ const Dashboard = () => {
                                           <li><NavLink to='/dashboard/adminhome'><FaHome />ADMIN HOME</NavLink></li>
                                           <li><NavLink to='/dashboard/courses'><FaBookOpen />Manage Projects</NavLink></li>
                                           <li><NavLink to='/dashboard/users'><FaUsers />Manage Users</NavLink></li>
+                                          <li><NavLink to='/dashboard/application-review'><FaUsers />Contributors Application</NavLink></li>
                                     </>
                               }
                               {
@@ -56,6 +57,8 @@ const Dashboard = () => {
                                     (user && !itInstructor && !isAdmin) && <>
                                           <li><NavLink to='/dashboard/userhome'>USER HOME</NavLink></li>
                                           <li><NavLink to='/dashboard/selected-courses'>Explore Projects</NavLink></li>
+                                          <li><NavLink to='/dashboard/apply-contributor'>Apply For Contribute</NavLink></li>
+
                                           {/* <li><NavLink to='/dashboard/enrolCoourses'>Enroll COURSES</NavLink></li>
                                           <li><NavLink to='/dashboard/paymentHistory'>PAYMENT HISTRORY</NavLink></li> */}
                                     </>

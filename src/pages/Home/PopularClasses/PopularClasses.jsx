@@ -7,10 +7,12 @@ import CourseCard from '../../Courses/CourseCard';
 const PopularClasses = () => {
       const [courses] = useCourses()
 
+      const filterCourse = courses?.filter(course=>course?.status == 'Active');
 
 
 
-      const popular = courses.slice(0, 6)
+
+      const popular = filterCourse.slice(0, 6)
      
 
 

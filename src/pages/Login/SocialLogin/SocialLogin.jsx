@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
-import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import useUrl from '../../../hooks/UseUrl';
 const SocialLogin = () => {
+      const [url]= useUrl()
       const { googleSignIn } = useContext(AuthContext);
       const navigate= useNavigate();
       const location = useLocation();
@@ -28,7 +30,7 @@ const SocialLogin = () => {
             }).catch(error=>setError(error.message))
        }
        const LoadData=(user)=>{
-            axios.post('https://language-learning-school-server.vercel.app/users',user)
+            axios.post(`${url}/users`,user)
             .then(res=>{
                   // console.log(res);
                   navigate(from,{replace:true})
@@ -41,7 +43,7 @@ const SocialLogin = () => {
                   }
                   
                   <button onClick={handlegooglesignIn} className="btn btn-circle btn-outline">
-                        <FaGoogle size={40} />
+                        <FcGoogle size={40} />
                   </button>
                   
             </div>

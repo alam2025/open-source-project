@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax, Background } from 'react-parallax';
-import LibraryBanner from '../../assets/banner/Library-banner.jpg';
+import LibraryBanner from '../../assets/bannerImg.jpeg';
 
 const SectionBanner = ({title,route}) => {
       // const title='ABC'

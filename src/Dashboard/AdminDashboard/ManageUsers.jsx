@@ -16,12 +16,12 @@ const ManageUsers = () => {
                   return res.data;
             }
       })
-      // console.log(users);
+    
 
       //admin set
       const handleAdmin = user => {
 
-            console.log(user);
+            
             axiosSecure.patch(`/users/admin/${user._id}`)
                   .then(data => {
 

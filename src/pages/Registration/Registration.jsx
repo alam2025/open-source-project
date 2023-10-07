@@ -10,8 +10,10 @@ import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import axios from 'axios';
 import { useRef } from 'react';
 import Swal from 'sweetalert2';
+import useUrl from '../../hooks/UseUrl';
 
 const Registration = () => {
+      const [url]= useUrl()
       const [processing, setProcessing] = useState(false)
       const { createUser,
             setProfile,
@@ -62,7 +64,7 @@ const Registration = () => {
 
                                     createUser(data.email, data.password)
                                           .then(result => {
-                                                axios.post('https://language-learning-school-server.vercel.app/users', newUser)
+                                                axios.post(`${url}/users`, newUser)
                                                       .then(res => {
 
                                                             setProfile(data.name, response.data.data.display_url)
@@ -98,7 +100,7 @@ const Registration = () => {
       return (
             <div >
                   <Helmet>
-                        <title>Language Learning School | Registration</title>
+                        <title>PloyMatrix | Registration</title>
                   </Helmet>
                   <SectionBanner title={'Registration'} route={'Home | Registration'}></SectionBanner>
                   <SectionTitle heading={'Application Form'} subHeading={'Become a Member'}></SectionTitle>

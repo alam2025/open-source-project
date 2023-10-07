@@ -13,7 +13,9 @@ const Courses = () => {
 
       const [courses] = useCourses()
  
-      console.log(courses);
+      const filterCourse = courses?.filter(course=>course?.status == 'Active');
+
+    
 
      
       
@@ -27,7 +29,7 @@ const Courses = () => {
                   <div className=' my-container mb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 
                         {
-                              courses?.map((item)=><CourseCard key={item.id} course={item}></CourseCard>)
+                              filterCourse?.map((item)=><CourseCard key={item.id} course={item}></CourseCard>)
                         }
                   
 
