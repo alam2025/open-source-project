@@ -1,5 +1,5 @@
-This is a project for the NASA Space Apps Challenge 2023
-We are universal participants and our Team Name is REDSHIFT
+This is a project for the NASA Space Apps Challenge 2023. 
+We are universal participants and our Team Name is REDSHIFT. 
 This is our Polymatrix info:
 
 
