@@ -1,4 +1,6 @@
-# Polymatrix 
+This is a project for the NASA Space Apps Challenge 2023
+We are universal participants and our Team Name is REDSHIFT
+This is our Polymatrix info:
 
 
 ## Links
@@ -6,37 +8,34 @@
    [Open source projets](https://open-source-cd9f6.web.app/?fbclid=IwAR1A8vyiLjzcNnDZdiNcrWDjejMtbcZxD5gcDdnAEJWKvw2YYdbNekmlwAA/ "Website url") and https://open-source-cd9f6.web.app/?fbclid=IwAR1A8vyiLjzcNnDZdiNcrWDjejMtbcZxD5gcDdnAEJWKvw2YYdbNekmlwAA
 
 2. Client Site git Repository
-   [CLient Site ](https://github.com/alam2025/open-source-project/ "Client site") and https://github.com/alam2025/open-source-project
+   [Client Site ](https://github.com/alam2025/open-source-project/ "Client site") and https://github.com/alam2025/open-source-project
 
 3. Server site git repository
    [Server site git ](https://github.com/alam2025/open_source_server/ "Server site") and https://github.com/alam2025/open_source_server
 
-3. Admin email & password
-   * Email : ekramhossain888@gmail.com
+3. Polymatrix Admin email & password for login
+   * Email: ekramhossain888@gmail.com
    * Password: Ekram12@#
-
-
-
 
 ## Features
   1. It has a home page 
-     * A navbar conditionally show data
+     * A navbar conditionally shows data
      * Slider upload from server
      * Popular Projects  section. Here 6 popular Projects shows
      * Also a contributors  section
     
  2. Contributors Page
-    * All Contributors here shows
-    * Some information are showed
+    * All Contributors here show
+    * Some information is showed
  3. Projects  Section
-    * Here all projects are display 
+    * Here all projects are displayed 
  4. In this section
-    * if a admin shows admin dashboad
-    * If user become contributors , then show contributors dashboad
-5. Login and Registratin
-    * if user not login then show login btn
-    * If login success, then show user image with hover user name.
-    * Also click on image , user can update his profile
+    * if an admin shows an admin dashboard
+    * If users become contributors, then show the contributors' dashboard
+5. Login and Registration
+    * if the user is not logged in then show the login button
+    * If login is successful, then show the user image with the hover user name.
+    * Also click on the image, the user can update his profile
 
 
 ## Technologies used
@@ -45,7 +44,7 @@
    3. React Carousel
    4. Tanstack Query
    5. JWT 
-   6. axios
+   6. Axios
    7. React hook-form
    8. firebase
    9. MongoDB
